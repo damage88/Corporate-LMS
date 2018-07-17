@@ -1,0 +1,19 @@
+<IfModule mod_security.c>
+SecFilterEngine Off
+SecFilterScanPOST Off
+</IfModule>
+RewriteEngine on
+
+#php_value memory_limit 256M
+#php_value upload_max_filesize 64M
+#php_value post_max_size 64M
+#php_value max_execution_time 300
+#php_value max_input_time 1000
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !^admin/
+RewriteCond %{REQUEST_URI} !^/admin/
+#RewriteCond $1 !^api/
+RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
+

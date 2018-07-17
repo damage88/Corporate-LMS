@@ -1,0 +1,14 @@
+{
+    "name": "didier/succes-assure",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Didier Mambo",
+            "email": "didier.mamgo@gmail.com"
+        }
+    ],
+    "require": {
+        "twig/twig": "~1.0",
+        "cloudconvert/cloudconvert-php": "2.2.*"
+    }
+}
